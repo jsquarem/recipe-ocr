@@ -5,15 +5,18 @@ import openai
 import logging
 import base64
 import requests
+from dotenv import load_dotenv
 
-# Set the OpenAI API key directly in the script (for testing purposes)
+load_dotenv()
+
+# Ensure the OpenAI API key is set
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # Ensure the OpenAI API key is set
 if not OPENAI_API_KEY:
     raise ValueError("The OPENAI_API_KEY environment variable is not set.")
-openai.api_key = OPENAI_API_KEY
 
+openai.api_key = OPENAI_API_KEY
 def process_image_with_ai(image_path):
     try:
         # Open the image file

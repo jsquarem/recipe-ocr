@@ -9,7 +9,7 @@ uploads_dir = 'uploads'
 # Ensure the uploads directory exists
 if not os.path.exists(uploads_dir):
     os.makedirs(uploads_dir)
-    
+
 app = Flask(__name__)
 
 

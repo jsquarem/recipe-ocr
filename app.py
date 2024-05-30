@@ -5,7 +5,15 @@ import os
 import logging
 from utils.ai_processing import process_image_with_ai
 
+uploads_dir = 'uploads'
+# Ensure the uploads directory exists
+if not os.path.exists(uploads_dir):
+    os.makedirs(uploads_dir)
+    
 app = Flask(__name__)
+
+
+
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 logging.basicConfig(level=logging.DEBUG)

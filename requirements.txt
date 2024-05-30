@@ -5,3 +5,5 @@ Pillow==10.3.0
 opencv-python-headless
 openai
 requests
+gunicorn
+python-dotenv
